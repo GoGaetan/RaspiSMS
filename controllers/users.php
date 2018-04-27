@@ -115,6 +115,8 @@
 				return false;
 			}
 
+			$admin = $admin ? 1 : 0 ;
+			
 			if (!$db->insertIntoTable('users', ['email' => $email, 'password' => $password, 'admin' => $admin]))
 			{
 				$_SESSION['errormessage'] = 'Impossible de créer cet utilisateur.';
